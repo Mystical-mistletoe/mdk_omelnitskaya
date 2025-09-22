@@ -1,0 +1,36 @@
+﻿<Window x:Class="UIApplication.UserWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:UIApplication"
+        mc:Ignorable="d"
+        Title="Окно пользователя" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Grid.Column="0" Margin="10">
+            <Label Content="Доступные услуги:"/>
+            <ListBox x:Name="servicesListBox" Height="200" SelectionChanged="servicesListBox_SelectionChanged"/>
+
+            <Label Content="Информация об услуге:"/>
+            <TextBlock x:Name="serviceNameTextBlock" FontWeight="Bold"/>
+            <TextBlock x:Name="serviceDescriptionTextBlock" TextWrapping="Wrap"/>
+            <TextBlock x:Name="servicePriceTextBlock"/>
+
+            <Label Content="Дата записи (дд.мм.гггг чч:мм):"/>
+            <TextBox x:Name="appointmentDateTextBox"/>
+            <Button x:Name="bookAppointmentButton" Content="Записаться" Click="bookAppointmentButton_Click"/>
+        </StackPanel>
+
+        <StackPanel Grid.Column="1" Margin="10">
+            <Label Content="Мои записи:"/>
+            <ListBox x:Name="appointmentsListBox" Height="200"/>
+            <Button x:Name="refreshAppointmentsButton" Content="Обновить" Click="refreshAppointmentsButton_Click"/>
+            <Button x:Name="logoutButton" Content="Выйти" Click="logoutButton_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>
