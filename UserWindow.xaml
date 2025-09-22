@@ -6,9 +6,6 @@
         xmlns:local="clr-namespace:UIApplication"
         mc:Ignorable="d"
         Title="Окно пользователя" Height="450" Width="700">
-    <Window.Background>
-        <ImageBrush ImageSource="Icons/background4.png"/>
-    </Window.Background>
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
@@ -17,7 +14,7 @@
 
         <StackPanel Grid.Column="0" Margin="10">
             <Label Content="Доступные услуги:" Foreground="White" FontWeight="Bold" FontSize="18" Background="SteelBlue" HorizontalContentAlignment="Center"/>
-            <ListBox x:Name="servicesListBox" Height="150" SelectionChanged="servicesListBox_SelectionChanged"/>
+            <ListBox x:Name="servicesListBox" Height="100" SelectionChanged="servicesListBox_SelectionChanged"/>
 
             <Label Content="Информация об услуге:" Foreground="White" FontWeight="Bold" FontSize="18" Background="SteelBlue" HorizontalContentAlignment="Center"/>
             <TextBlock x:Name="serviceNameTextBlock" FontWeight="Bold" Background="White"/>
@@ -25,12 +22,12 @@
             <TextBlock x:Name="servicePriceTextBlock" Background="White"/>
 
             <Label Content="Дата записи (дд.мм.гггг чч:мм):" Foreground="White" FontSize="16" Background="SteelBlue"/>
-            <TextBox x:Name="appointmentDateTextBox"/>
             <Button x:Name="bookAppointmentButton" Content="Записаться" Click="bookAppointmentButton_Click" Foreground="White">
                 <Button.Background>
                     <SolidColorBrush Color="RoyalBlue"/>
                 </Button.Background>
             </Button>
+            <DatePicker Name="appointmentDateTextBox" IsDropDownOpen="True" SelectedDateFormat="Short" DisplayDate="2025-09-09"/>
         </StackPanel>
 
         <StackPanel Grid.Column="1" Margin="10">
@@ -46,6 +43,7 @@
                     <SolidColorBrush Color="RoyalBlue"/>
                 </Button.Background>
             </Button>
+            <TextBlock Text="После записи на услугу на почту Вам придет письмо c информацией о способе оплаты, напоминанием точного места фотосессии и другой информацией" TextWrapping="Wrap"/>
         </StackPanel>
     </Grid>
 </Window>

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Intrinsics.Arm;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -55,6 +56,7 @@ namespace UIApplication
                 serviceNameTextBlock.Text = selectedService.Name;
                 serviceDescriptionTextBlock.Text = selectedService.Description;
                 servicePriceTextBlock.Text = selectedService.Price.ToString("C");
+
             }
         }
 
@@ -67,6 +69,7 @@ namespace UIApplication
             }
 
             DateTime appointmentDate;
+     
             if (!DateTime.TryParse(appointmentDateTextBox.Text, out appointmentDate))
             {
                 MessageBox.Show("Пожалуйста, введите корректную дату.", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Warning);
@@ -102,5 +105,6 @@ namespace UIApplication
             mainWindow.Show();
             this.Close();
         }
+
     }
 }
