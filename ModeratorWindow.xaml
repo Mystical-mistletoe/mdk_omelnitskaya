@@ -5,7 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:UIApplication"
         mc:Ignorable="d"
-        Title="Окно модератора" Height="450" Width="800">
+        AllowsTransparency="True" WindowStyle="None"
+        Title="Окно модератора" Height="450" Width="700">
+    <Window.Background>
+        <ImageBrush ImageSource="Icons/background4.png"/>
+    </Window.Background>
+
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
@@ -13,24 +18,48 @@
         </Grid.ColumnDefinitions>
 
         <StackPanel Grid.Column="0" Margin="10">
-            <Label Content="Список услуг:"/>
+            <Label Content="Список услуг:" Foreground="White" FontWeight="Bold" FontSize="18" />
             <ListBox x:Name="servicesListBox" Height="200" SelectionChanged="servicesListBox_SelectionChanged"/>
         </StackPanel>
 
         <StackPanel Grid.Column="1" Margin="10">
-            <Label Content="Редактирование услуги:"/>
-            <TextBox x:Name="serviceNameTextBox" Margin="0,0,0,5"/>
+            <Label Content="Редактирование услуги:" FontSize="18" FontWeight="Bold" Foreground="White"/>
+            <Label Content="Название услуги" FontSize="14" FontWeight="Bold" Foreground="White" Background="SteelBlue" HorizontalContentAlignment="Center"/>
+            <TextBox x:Name="serviceNameTextBox" Margin="0,0,0,5" Height="30"/>
+            <Label Content="Описание услуги" FontSize="14" FontWeight="Bold" Foreground="White" Background="SteelBlue" HorizontalContentAlignment="Center"/>
             <TextBox x:Name="serviceDescriptionTextBox" Margin="0,0,0,5" Height="60" TextWrapping="Wrap"/>
+            <Label Content="Цена услуги" FontSize="14" FontWeight="Bold" Foreground="White" Background="SteelBlue" HorizontalContentAlignment="Center"/>
             <TextBox x:Name="servicePriceTextBox" Margin="0,0,0,5"/>
-
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                <Button x:Name="addServiceButton" Content="Добавить" Margin="5" Click="addServiceButton_Click"/>
-                <Button x:Name="updateServiceButton" Content="Обновить" Margin="5" Click="updateServiceButton_Click"/>
-                <Button x:Name="deleteServiceButton" Content="Удалить" Margin="5" Click="deleteServiceButton_Click"/>
+                <Button x:Name="addServiceButton" Content="Добавить" Margin="5" Click="addServiceButton_Click" Foreground="White">
+                    <Button.Background>
+                        <SolidColorBrush Color="SteelBlue" />
+                    </Button.Background>
+                </Button>
+
+                <Button x:Name="updateServiceButton" Content="Обновить" Margin="5" Click="updateServiceButton_Click" Foreground="White">
+                    <Button.Background>
+                        <SolidColorBrush Color="SteelBlue" />
+                    </Button.Background>
+                </Button>
+                <Button x:Name="deleteServiceButton" Content="Удалить" Margin="5" Click="deleteServiceButton_Click" Foreground="White">
+                    <Button.Background>
+                        <SolidColorBrush Color="SteelBlue" />
+                    </Button.Background>
+                </Button>
             </StackPanel>
 
-            <Button x:Name="exportAppointmentsButton" Content="Экспорт записей" Margin="5" Click="exportAppointmentsButton_Click"/>
-            <Button x:Name="logoutButton" Content="Выйти" Margin="5" Click="logoutButton_Click"/>
+            <Button x:Name="exportAppointmentsButton" Content="Экспорт записей" Margin="5" Click="exportAppointmentsButton_Click" Foreground="White">
+                <Button.Background>
+                    <SolidColorBrush Color="RoyalBlue"/>
+                </Button.Background>
+            </Button>
+            <Button x:Name="logoutButton" Content="Выйти" Margin="5" Click="logoutButton_Click" Foreground="White">
+                <Button.Background>
+                    <SolidColorBrush Color="RoyalBlue"/>
+                </Button.Background>
+            </Button>
         </StackPanel>
     </Grid>
 </Window>
+
