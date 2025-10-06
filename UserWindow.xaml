@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:UIApplication"
         mc:Ignorable="d"
-        Title="Окно пользователя" Height="450" Width="700">
+        Title="Окно пользователя" Height="450" Width="700" Background="DarkSlateGray">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
@@ -22,12 +22,13 @@
             <TextBlock x:Name="servicePriceTextBlock" Background="White"/>
 
             <Label Content="Дата записи (дд.мм.гггг чч:мм):" Foreground="White" FontSize="16" Background="SteelBlue"/>
+           
+            <DatePicker Name="appointmentDateTextBox" IsDropDownOpen="True" SelectedDateFormat="Short" DisplayDate="2025-09-09"/>
             <Button x:Name="bookAppointmentButton" Content="Записаться" Click="bookAppointmentButton_Click" Foreground="White">
                 <Button.Background>
                     <SolidColorBrush Color="RoyalBlue"/>
                 </Button.Background>
             </Button>
-            <DatePicker Name="appointmentDateTextBox" IsDropDownOpen="True" SelectedDateFormat="Short" DisplayDate="2025-09-09"/>
         </StackPanel>
 
         <StackPanel Grid.Column="1" Margin="10">
@@ -43,7 +44,7 @@
                     <SolidColorBrush Color="RoyalBlue"/>
                 </Button.Background>
             </Button>
-            <TextBlock Text="После записи на услугу на почту Вам придет письмо c информацией о способе оплаты, напоминанием точного места фотосессии и другой информацией" TextWrapping="Wrap"/>
+            <TextBlock Text="После записи на услугу на почту Вам придет письмо c информацией о способе оплаты, напоминанием точного места фотосессии и другой информацией" TextWrapping="Wrap"  Foreground="White"/>
         </StackPanel>
     </Grid>
 </Window>

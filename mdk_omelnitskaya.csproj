@@ -8,4 +8,12 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="Icons\background4.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Icons\background4.png" />
+  </ItemGroup>
+
 </Project>
