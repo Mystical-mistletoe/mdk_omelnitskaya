@@ -62,7 +62,12 @@ namespace UIApplication.Services
 
         public static List<Service> GetAllServices()
         {
-            return _services;
+            List<Service> userService= new List<Service>();
+            foreach (var appointment in _services)
+            {
+                userService.Add(appointment);
+            }
+            return userService;
         }
 
         public static Service GetServiceById(int id)

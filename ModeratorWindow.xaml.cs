@@ -44,7 +44,7 @@ namespace UIApplication
             {
                 serviceNameTextBox.Text = selectedService.Name;
                 serviceDescriptionTextBox.Text = selectedService.Description;
-                servicePriceTextBox.Text = selectedService.Price.ToString();
+                servicePriceTextBox.Text = selectedService.Price.ToString("C");
             }
         }
 
