@@ -5,8 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:UIApplication"
         mc:Ignorable="d"
-        AllowsTransparency="True" WindowStyle="None"
-        Title="Окно модератора"  Height="450" Width="700" Background="DarkSlateGray">
+        Title="Окно модератора"  Height="500" Width="750" Background="DarkSlateGray">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
@@ -27,30 +26,30 @@
             <Label Content="Цена услуги" FontSize="14" FontWeight="Bold" Foreground="White" Background="SteelBlue" HorizontalContentAlignment="Center"/>
             <TextBox x:Name="servicePriceTextBox" Margin="0,0,0,5" Height="30"/>
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                <Button x:Name="addServiceButton" Content="Добавить" Margin="5" Click="addServiceButton_Click" Foreground="White">
+                <Button x:Name="addServiceButton" Content="Добавить"  FontSize="16" Margin="5" Click="addServiceButton_Click" Foreground="White">
                     <Button.Background>
                         <SolidColorBrush Color="SteelBlue" />
                     </Button.Background>
                 </Button>
 
-                <Button x:Name="updateServiceButton" Content="Обновить" Margin="5" Click="updateServiceButton_Click" Foreground="White">
+                <Button x:Name="updateServiceButton" Content="Обновить" Margin="5"  FontSize="16" Click="updateServiceButton_Click" Foreground="White">
                     <Button.Background>
                         <SolidColorBrush Color="SteelBlue" />
                     </Button.Background>
                 </Button>
-                <Button x:Name="deleteServiceButton" Content="Удалить" Margin="5" Click="deleteServiceButton_Click" Foreground="White">
+                <Button x:Name="deleteServiceButton" Content="Удалить"  FontSize="16" Margin="5" Click="deleteServiceButton_Click" Foreground="White">
                     <Button.Background>
                         <SolidColorBrush Color="SteelBlue" />
                     </Button.Background>
                 </Button>
             </StackPanel>
 
-            <Button x:Name="exportAppointmentsButton" Content="Экспорт записей" Margin="5" Click="exportAppointmentsButton_Click" Foreground="White">
+            <Button x:Name="exportAppointmentsButton" Content="Экспорт записей"  FontSize="16" Margin="5" Click="exportAppointmentsButton_Click" Foreground="White">
                 <Button.Background>
                     <SolidColorBrush Color="RoyalBlue"/>
                 </Button.Background>
             </Button>
-            <Button x:Name="logoutButton" Content="Выйти" Margin="5" Click="logoutButton_Click" Foreground="White">
+            <Button x:Name="logoutButton" Content="Выйти" Margin="5" Click="logoutButton_Click"  FontSize="18" Foreground="White">
                 <Button.Background>
                     <SolidColorBrush Color="RoyalBlue"/>
                 </Button.Background>

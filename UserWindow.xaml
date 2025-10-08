@@ -24,7 +24,7 @@
             <Label Content="Дата записи (дд.мм.гггг чч:мм):" Foreground="White" FontSize="16" Background="SteelBlue"/>
            
             <DatePicker Name="appointmentDateTextBox" IsDropDownOpen="True" SelectedDateFormat="Short" DisplayDate="2025-09-09"/>
-            <Button x:Name="bookAppointmentButton" Content="Записаться" Click="bookAppointmentButton_Click" Foreground="White">
+            <Button x:Name="bookAppointmentButton"  FontSize="18" Content="Записаться" Click="bookAppointmentButton_Click" Foreground="White">
                 <Button.Background>
                     <SolidColorBrush Color="RoyalBlue"/>
                 </Button.Background>
@@ -34,17 +34,17 @@
         <StackPanel Grid.Column="1" Margin="10">
             <Label Content="Мои записи:" Foreground="White" FontWeight="Bold" FontSize="18" Background="SteelBlue" HorizontalContentAlignment="Center"/>
             <ListBox x:Name="appointmentsListBox" Height="200"/>
-            <Button x:Name="refreshAppointmentsButton" Content="Обновить" Click="refreshAppointmentsButton_Click" Foreground="White">
+            <Button x:Name="refreshAppointmentsButton"  FontSize="16" Content="Обновить" Click="refreshAppointmentsButton_Click" Foreground="White">
                 <Button.Background>
                     <SolidColorBrush Color="RoyalBlue"/>
                 </Button.Background>
             </Button>
-            <Button x:Name="logoutButton" Content="Выйти" Click="logoutButton_Click" Foreground="White">
+            <Button x:Name="logoutButton" Content="Выйти"  FontSize="18" Click="logoutButton_Click" Foreground="White">
                 <Button.Background>
                     <SolidColorBrush Color="RoyalBlue"/>
                 </Button.Background>
             </Button>
-            <TextBlock Text="После записи на услугу на почту Вам придет письмо c информацией о способе оплаты, напоминанием точного места фотосессии и другой информацией" TextWrapping="Wrap"  Foreground="White"/>
+            <TextBlock  FontSize="14" Text="После записи на услугу на почту Вам придет письмо c информацией о способе оплаты, напоминанием точного места фотосессии и другой информацией" TextWrapping="Wrap"  Foreground="White"/>
         </StackPanel>
     </Grid>
 </Window>
