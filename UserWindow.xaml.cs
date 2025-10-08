@@ -80,7 +80,8 @@ namespace UIApplication
             {
                 UserLogin = _currentUserLogin,
                 ServiceId = selectedService.Id,
-                AppointmentTime = appointmentDate
+                AppointmentTime = appointmentDate,
+                AppName = selectedService.Name,
             };
 
             if (AppointmentManager.AddAppointment(newAppointment))

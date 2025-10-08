@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.NetworkInformation;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -23,12 +24,14 @@ namespace UIApplication
     public partial class ModeratorWindow : Window
     {
         private List<Service> _services;
+        private List<Appointment> _userAppointments;
 
         public ModeratorWindow()
         {
             InitializeComponent();
             Title = "Окно модератора";
             LoadServices();
+            LoadUserAppointments();
         }
 
         private void LoadServices()
@@ -155,6 +158,24 @@ namespace UIApplication
             MainWindow mainWindow = new MainWindow();
             mainWindow.Show();
             this.Close();
+        }
+
+        private void LoadUserAppointments()
+        {
+            _userAppointments = AppointmentManager.GetAllAppointments();
+            appointmentsListBox.ItemsSource = _userAppointments;
+            appointmentsListBox.DisplayMemberPath = "AppointmentTime";
+        }
+
+        private void AppointmentListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (appointmentsListBox.SelectedItem is Appointment selectedAppointments)
+            {
+
+                service1NameTextBlock.Text = selectedAppointments.AppName;
+                service1UserTextBlock.Text = selectedAppointments.UserLogin;
+
+            }
         }
     }
 }

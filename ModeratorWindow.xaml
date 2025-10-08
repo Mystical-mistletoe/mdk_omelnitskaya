@@ -14,7 +14,12 @@
 
         <StackPanel Grid.Column="0" Margin="10">
             <Label Content="Список услуг:" Foreground="White" FontWeight="Bold" FontSize="18" />
-            <ListBox x:Name="servicesListBox" Height="300" SelectionChanged="servicesListBox_SelectionChanged"/>
+            <ListBox x:Name="servicesListBox" Height="100" SelectionChanged="servicesListBox_SelectionChanged"/>
+            <Label Content="Список записей:" FontSize="18" FontWeight="Bold" Foreground="White"/>
+            <ListBox x:Name="appointmentsListBox" Height="100" SelectionChanged="AppointmentListBox_SelectionChanged"/>
+            <Label Content="О записи:" FontSize="18" FontWeight="Bold" Foreground="White"/>
+            <TextBlock x:Name="service1NameTextBlock" FontWeight="Bold" Background="White"/>
+            <TextBlock x:Name="service1UserTextBlock" TextWrapping="Wrap" Background="White"/>
         </StackPanel>
 
         <StackPanel Grid.Column="1" Margin="10">
@@ -22,7 +27,7 @@
             <Label Content="Название услуги" FontSize="14" FontWeight="Bold" Foreground="White" Background="SteelBlue" HorizontalContentAlignment="Center"/>
             <TextBox x:Name="serviceNameTextBox" Margin="0,0,0,5" Height="50"/>
             <Label Content="Описание услуги" FontSize="14" FontWeight="Bold" Foreground="White" Background="SteelBlue" HorizontalContentAlignment="Center"/>
-            <TextBox x:Name="serviceDescriptionTextBox" Margin="0,0,0,5" Height="80" TextWrapping="Wrap"/>
+            <TextBox x:Name="serviceDescriptionTextBox" Margin="0,0,0,5" Height="50" TextWrapping="Wrap"/>
             <Label Content="Цена услуги" FontSize="14" FontWeight="Bold" Foreground="White" Background="SteelBlue" HorizontalContentAlignment="Center"/>
             <TextBox x:Name="servicePriceTextBox" Margin="0,0,0,5" Height="30"/>
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">

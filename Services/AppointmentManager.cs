@@ -115,7 +115,7 @@ namespace UIApplication.Services
             List<string> lines = new List<string>();
             foreach (var appointment in _appointments)
             {
-                lines.Add($"ID: {appointment.Id}, User: {appointment.UserLogin}, Service ID: {appointment.ServiceId}, Time: {appointment.AppointmentTime}");
+                lines.Add($"ID: {appointment.Id}, User: {appointment.UserLogin}, Service ID: {appointment.ServiceId}, Time: {appointment.AppointmentTime}, AppName: {appointment.AppName}");
             }
             File.WriteAllLines(filePath, lines);
         }

@@ -12,5 +12,6 @@ namespace UIApplication.Models
         public string UserLogin { get; set; }
         public int ServiceId { get; set; }
         public DateTime AppointmentTime { get; set; }
+        public string AppName { get; set; }
     }
 }

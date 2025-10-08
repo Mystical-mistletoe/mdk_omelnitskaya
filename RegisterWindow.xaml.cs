@@ -44,6 +44,38 @@ namespace UIApplication
                 return;
             }
 
+            if (password.Length < 8)
+            {
+                MessageBox.Show("Пароль должен содержать не менее 8 символов.", "Ошибка регистрации", MessageBoxButton.OK, MessageBoxImage.Warning);
+                return;
+            }
+
+            if (!login.Contains("@yandex.ru"))
+            {
+                MessageBox.Show("Логин должен содержать домен @yandex.ru.", "Ошибка регистрации", MessageBoxButton.OK, MessageBoxImage.Warning);
+                return;
+            }
+
+            if (!login.EndsWith("@yandex.ru", StringComparison.OrdinalIgnoreCase))
+            {
+                MessageBox.Show("Логин должен заканчиваться доменом @yandex.ru.", "Ошибка регистрации", MessageBoxButton.OK, MessageBoxImage.Warning);
+                return;
+            }
+
+            if (login.StartsWith("@yandex.ru"))
+            {
+                MessageBox.Show("Логин не может начинаться с домена @yandex.ru. Введите имя пользователя перед доменом.",
+                               "Ошибка регистрации", MessageBoxButton.OK, MessageBoxImage.Warning);
+                return;
+            }
+
+            if (login.IndexOf("@yandex.ru") == 0)
+            {
+                MessageBox.Show("Логин должен содержать имя пользователя перед доменом @yandex.ru.",
+                               "Ошибка регистрации", MessageBoxButton.OK, MessageBoxImage.Warning);
+                return;
+            }
+
             if (UserManager.RegisterUser(login, password))
             {
                 MessageBox.Show("Регистрация прошла успешно!", "Успех", MessageBoxButton.OK, MessageBoxImage.Information);
